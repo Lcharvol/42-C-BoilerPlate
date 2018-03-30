@@ -1,7 +1,7 @@
-$libft = false
-$mlx = false
-
-echo  "\033[36m ==== 42 C BoilerPlate by Lcharvol ===="
+printf "%b\n"
+echo  "\033[36m ========================================"
+echo  " ==== create-42-c-project by Lcharvol ===="
+echo  " ========================================"
 
 printf "%b\n"
 echo  "\033[1m"
@@ -13,7 +13,7 @@ echo "Include libft? "
 
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) libft=true; break;;
+        Yes ) sh ./scripts/libft.sh; break;;
         No ) libft=false; break;;
     esac
 done
