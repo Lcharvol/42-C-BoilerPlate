@@ -8,6 +8,16 @@ function ProgressBar {
 	printf "\rClonnig libft : [${_fill// /#}${_empty// /-}] ${_progress}%%"
 }
 
+echo  "\033[32m"
+echo "Include libft? "
+
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) break;;
+        No ) exit;;
+    esac
+done
+printf "%b\n"
 rm -rf libft
 mkdir libft
 printf "%b\n"

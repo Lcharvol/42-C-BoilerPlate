@@ -1,6 +1,8 @@
+rm -rf srcs
 mkdir srcs
-touch srcs/main.c
+sh ./scripts/skeleton/srcs.sh
 
+rm -rf includes
 mkdir includes
 touch ./includes/$PROJECT_NAME.h
 
