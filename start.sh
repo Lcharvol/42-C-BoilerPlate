@@ -1,12 +1,13 @@
 printf "%b\n"
-echo  "\033[36m ========================================"
+echo  "\033[36m ========================================="
 echo  " ==== create-42-c-project by Lcharvol ===="
-echo  " ========================================"
+echo  " ========================================="
 
 printf "%b\n"
 echo  "\033[1m"
 read -p "Enter project's name: " name
-
+export PROJECT_NAME=$name
+sh ./scripts/skeleton.sh
 printf "%b\n"
 echo  "\033[32m"
 echo "Include libft? "
