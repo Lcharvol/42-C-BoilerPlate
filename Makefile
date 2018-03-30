@@ -10,11 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME=test
+NAME=colpleux
 
 SRCS:=srcs/main.c 
 
-INC=./includes/test.h
+INC=./includes/colpleux.h
 
 FLAGS=-Wall -Werror -Wextra -I./includes
 

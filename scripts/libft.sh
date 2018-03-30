@@ -13,8 +13,8 @@ echo "Include libft? "
 
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) break;;
-        No ) exit;;
+        Yes ) export USER_LIBFT=true; break;;
+        No ) export USE_LIBFT=false; exit;;
     esac
 done
 printf "%b\n"
