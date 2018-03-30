@@ -8,6 +8,5 @@
 # include <stdio.h>
 # include <limits.h>
 # include "../libft/libft.h"
-# define RESET "\e[0m"
 
 #endif
