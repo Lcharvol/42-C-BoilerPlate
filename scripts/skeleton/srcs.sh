@@ -1,3 +1,5 @@
+rm -rf srcs
+mkdir srcs
 touch srcs/main.c
 echo "/* ************************************************************************** */
 /*                                                                            */
@@ -13,8 +15,7 @@ echo "/* ***********************************************************************
 
 #include \"../includes/"$PROJECT_NAME".h\"
 
-int			main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	return(0);
-}
-" >> srcs/main.c
+	return (0);
+}" >> srcs/main.c
