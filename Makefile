@@ -10,11 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME=tet
+NAME=test
 
 SRCS:=srcs/main.c 
 
-INC=./includes/tet.h
+INC=./includes/test.h
 
 FLAGS=-Wall -Werror -Wextra -I./includes
 

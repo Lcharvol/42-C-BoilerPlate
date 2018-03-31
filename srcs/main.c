@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/tet.h"
+#include "../includes/test.h"
 
 int	main(int argc, char **argv)
 {
