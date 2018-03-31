@@ -7,6 +7,7 @@ function push {
 	git commit -m "Init project"
 	echo "\033[30m"
 	git push origin master
+	cd ..
 	rm -rf toPush
 }
 
