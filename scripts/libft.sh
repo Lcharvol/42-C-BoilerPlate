@@ -7,16 +7,6 @@ function ProgressBar {
     _empty=$(printf "%${_left}s")
 	printf "\rClonnig libft : [${_fill// /#}${_empty// /-}] ${_progress}%%"
 }
-
-echo  "\033[32m"
-echo "Include libft? "
-
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) export USER_LIBFT=true; break;;
-        No ) export USE_LIBFT=false; exit;;
-    esac
-done
 printf "%b\n"
 rm -rf libft
 mkdir libft
@@ -25,7 +15,7 @@ echo "Would you like to clone it from a gitHub repository?: "
 select yn in "Yes" "No"; do
     case $yn in
         Yes )
-			printf "%b\n"
+			printf "%b\n";
 			read -p "Enter repository URL: " url;
 			git clone $url libft 2>1;
 			rm -rf 1;
