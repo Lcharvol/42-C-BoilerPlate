@@ -8,7 +8,7 @@ function push {
 }
 
 echo "\033[34m"
-echo "	Would you like to push it into an existing github repository? "
+echo "	🔥	Would you like to push it into an existing github repository? "
 select yn in "Yes" "No"; do
     case $yn in
         Yes )
