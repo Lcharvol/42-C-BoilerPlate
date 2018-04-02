@@ -1,3 +1,4 @@
+#!/bin/bash
 # Get the project name
 printf "%b\n"
 read -p "	🐬	Enter project's name: " name

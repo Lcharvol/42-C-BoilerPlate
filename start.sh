@@ -1,3 +1,4 @@
+#!/bin/bash
 # Set emoji
 
 sh ./scripts/setEmoji.sh
@@ -7,13 +8,13 @@ sh ./scripts/header.sh
 
 # Menu options select
 
-PS3='What do you want to do? '
-options=("Create a new Project" "Manage a Project" "Update projects list" "Quit")
+PS3='What do you want to do? ';
+options=("Create a new Project" "Manage a Project" "Update projects list" "Quit");
 select opt in "${options[@]}"
 do
     case $opt in
         "Create a new Project")
-            sh ./scripts/createNewProject.sh
+            ./scripts/createNewProject.sh
             exit
             ;;
         "Update projects list")
