@@ -1,4 +1,6 @@
 projectName=$1
 repositoryURL=$2
 
-echo $projectName $repositoryURL >> ./config/projects.config
+path=./config/$PROJECT_NAME.config
+touch $path
+echo $projectName $repositoryURL >> $path

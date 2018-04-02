@@ -17,7 +17,7 @@ do
             bash ./scripts/createNewProject.sh
             exit
             ;;
-        "Update projects list")
+        "Update projects list\e[95m")
 	        ./scripts/updateProjects.sh
 	        ;;
         "Manage a Project")
