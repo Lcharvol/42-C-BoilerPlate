@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function push {
 	rm -rf toPush
 	git clone ${1} toPush >> githubLogs
