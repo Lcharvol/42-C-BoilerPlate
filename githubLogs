@@ -1,0 +1,8 @@
+[master f66223e] Init project
+ 6 files changed, 60 insertions(+), 3 deletions(-)
+ create mode 100644 Projects/ewartqwt/Makefile
+ create mode 100644 Projects/ewartqwt/includes/ewartqwt.h
+ create mode 100644 Projects/ewartqwt/srcs/main.c
+ create mode 100644 githubLogs
+ mode change 100644 => 100755 scripts/createNewProject.sh
+ mode change 100644 => 100755 start.sh
