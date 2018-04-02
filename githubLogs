@@ -12,3 +12,8 @@
  create mode 100644 Projects/erwr/includes/erwr.h
  create mode 100644 Projects/erwr/srcs/main.c
  mode change 100644 => 100755 scripts/github.sh
+[master 3f42574] Init project
+ 5 files changed, 63 insertions(+)
+ create mode 100644 Projects/rqweotiortweg/Makefile
+ create mode 100644 Projects/rqweotiortweg/includes/rqweotiortweg.h
+ create mode 100644 Projects/rqweotiortweg/srcs/main.c

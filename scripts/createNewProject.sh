@@ -21,7 +21,7 @@ mkdir ./Projects/$name
 export PROJECT_NAME=$name
 
 # Ask for libft
-echo  "\033[32m"
+echo  -e "\e[36m"
 echo "	Include any library from a github repository? "
 select yn in "Yes" "No"; do
     case $yn in

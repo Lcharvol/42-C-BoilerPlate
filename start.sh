@@ -14,11 +14,11 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Create a new Project")
-            ./scripts/createNewProject.sh
+            bash ./scripts/createNewProject.sh
             exit
             ;;
         "Update projects list")
-	        sh ./scripts/updateProjects.sh
+	        ./scripts/updateProjects.sh
 	        ;;
         "Manage a Project")
 			printf "%b\n"
