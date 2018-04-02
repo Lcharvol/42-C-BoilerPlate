@@ -1,4 +1,4 @@
-
+#!/bin/bash
 function ProgressBar {
     let _progress=(${1}*100/${2}*100)/100
     let _done=(${_progress}*4)/10
@@ -15,10 +15,11 @@ printf "%b\n"
 read -p "Enter library name: " libname
 read -p "Enter library repository URL: " libUrl
 
+path='./Projects/'$PROJECT_NAME/$libname
 printf "%b\n";
-git clone $libUrl $libname 2>1;
+git clone $libUrl $path 2>1;
 rm -rf 1;
-rm -rf ./$libname/auteur ./$libname/.git;
+rm -rf $path/auteur $path/.git;
 
 
 

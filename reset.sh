@@ -1,8 +1,4 @@
-
-rm -rf ./srcs
-rm -rf ./libft
-rm -rf ./includes
-rm -rf MakeFile
 rm -rf ./Projects/*
+touch ./Projects/.gitkeep
 rm -rf ./githubLogs
 rm -rf .DS_Store

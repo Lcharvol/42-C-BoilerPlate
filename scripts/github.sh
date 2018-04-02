@@ -13,7 +13,6 @@ function push {
 	rm -rf toPush
 }
 
-echo "\033[34m"
 echo "	🔥	Would you like to push it into an existing github repository? "
 select yn in "Yes" "No"; do
     case $yn in
@@ -21,13 +20,12 @@ select yn in "Yes" "No"; do
 			read -p "	Enter repository URL: " url;
 			push ${url} >> githubLogs;
 			# Add new project in projects config
-			sh ./scripts/config/addProject.sh $PROJECT_NAME $url;
+			bash ./scripts/config/addProject.sh $PROJECT_NAME $url;
 			break;;
-        No ) sh ./scripts/config/addProject.sh $PROJECT_NAME "null"; break;;
+        No ) bash ./scripts/config/addProject.sh $PROJECT_NAME "null"; break;;
     esac
 done
 printf "%b\n"
-echo "\033[34m"
 echo "	🔥	Would you like to push it into a 42 repository? "
 select yn in "Yes" "No"; do
     case $yn in
