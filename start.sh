@@ -5,27 +5,25 @@ sh ./scripts/setEmoji.sh
 # Print script Header
 sh ./scripts/header.sh
 
-# Get the project name
-read -p "	🐬	Enter project's name: " name
-export PROJECT_NAME=$name
-mkdir $name
+# Menu options select
 
-# Ask for libft
-echo  "\033[32m"
-echo "	Include any library from a github repository? "
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) export USE_LIB=true; sh ./scripts/lib.sh;break;;
-        No ) export USE_LIB=false; break;;
+PS3='What do you want to do? '
+options=("Create a new Project" "Modify a Project" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Create a new Project")
+            sh ./scripts/createNewProject.sh
+            exit
+            ;;
+        "Modify a Project")
+			printf "%b\n"
+            echo "	Modify a Project Comming soon!"
+            printf "%b\n"
+            ;;
+        "Quit")
+            exit
+            ;;
+        *) echo invalid option;;
     esac
 done
-
-# Generate basique skeleton
-sh ./scripts/skeleton/skeleton.sh
-
-# Push to an existing github repository
-sh ./scripts/github.sh
-
-echo  "\033[32m"
-echo "	Your project is now ready to be used! 😘"
-printf "%b\n"

@@ -1,6 +1,5 @@
 
-path='./'$PROJECT_NAME'/Makefile'
-echo "patn: " $path 
+path='./Projects/'$PROJECT_NAME'/Makefile'
 rm -rf $path
 touch $path
 echo "# **************************************************************************** #

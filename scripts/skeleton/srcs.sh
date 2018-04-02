@@ -1,6 +1,7 @@
-rm -rf ./$PROJECT_NAME/srcs
-mkdir ./$PROJECT_NAME/srcs
-touch ./$PROJECT_NAME/srcs/main.c
+path='./Projects/'$PROJECT_NAME'/srcs'
+rm -rf $path
+mkdir $path
+touch $path/main.c
 echo "/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -18,4 +19,4 @@ echo "/* ***********************************************************************
 int	main(int argc, char **argv)
 {
 	return (0);
-}" >> ./$PROJECT_NAME/srcs/main.c
+}" >> $path/main.c
