@@ -17,9 +17,11 @@ select yn in "Yes" "No"; do
     case $yn in
         Yes )
 			read -p "	Enter repository URL: " url;
-			push ${url} >> githubLogs
+			push ${url} >> githubLogs;
+			# Add new project in projects config
+			sh ./scripts/config/addProject.sh $PROJECT_NAME $url;
 			break;;
-        No ) break;;
+        No ) sh ./scripts/config/addProject.sh $PROJECT_NAME "null"; break;;
     esac
 done
 printf "%b\n"
@@ -34,4 +36,6 @@ select yn in "Yes" "No"; do
         No ) break;;
     esac
 done
-# sh ./reset.sh
+
+# Add new project in projects config
+sh ./scripts/config/addProject.sh $PROJECT_NAME $url

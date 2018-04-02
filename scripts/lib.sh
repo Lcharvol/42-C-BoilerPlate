@@ -23,26 +23,6 @@ rm -rf ./$libname/auteur ./$libname/.git;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # rm -rf libft
 # mkdir libft
 # printf "%b\n"
