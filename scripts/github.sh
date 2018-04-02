@@ -1,12 +1,12 @@
 function push {
 	rm -rf toPush
-	git clone ${1} toPush
-	cp -R includes srcs Makefile toPush
+	git clone ${1} toPush >> githubLogs
+	cp -R $PROJECT_NAME toPush
 	cd toPush
 	git add .
-	git commit -m "Init project"
+	git commit -m "Init project" >> githubLogs
 	echo "\033[30m"
-	git push origin master
+	git push origin master >> githubLogs
 	cd ..
 	rm -rf toPush
 }
@@ -17,7 +17,7 @@ select yn in "Yes" "No"; do
     case $yn in
         Yes )
 			read -p "	Enter repository URL: " url;
-			push ${url}
+			push ${url} >> githubLogs
 			break;;
         No ) break;;
     esac
@@ -34,4 +34,4 @@ select yn in "Yes" "No"; do
         No ) break;;
     esac
 done
-
+# sh ./reset.sh

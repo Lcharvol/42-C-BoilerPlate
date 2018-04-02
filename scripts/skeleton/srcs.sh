@@ -1,6 +1,6 @@
-rm -rf srcs
-mkdir srcs
-touch srcs/main.c
+rm -rf ./$PROJECT_NAME/srcs
+mkdir ./$PROJECT_NAME/srcs
+touch ./$PROJECT_NAME/srcs/main.c
 echo "/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -18,4 +18,4 @@ echo "/* ***********************************************************************
 int	main(int argc, char **argv)
 {
 	return (0);
-}" >> srcs/main.c
+}" >> ./$PROJECT_NAME/srcs/main.c

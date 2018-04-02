@@ -1,5 +1,8 @@
-rm -rf Makefile
-touch Makefile
+
+path='./'$PROJECT_NAME'/Makefile'
+echo "patn: " $path 
+rm -rf $path
+touch $path
 echo "# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -21,15 +24,15 @@ INC=./includes/"$PROJECT_NAME".h
 FLAGS=-Wall -Werror -Wextra -I./includes
 
 OBJ=\$(addprefix srcs/, \$(SRCS:.c=.o))
-" >> Makefile 
-if [ $USE_LIBFT = true ] 
-	then echo "all: libft \$(NAME)" >> Makefile;
-else echo "all: \$(NAME) " >> Makefile
+" >> $path
+if [ $USE_LIB = true ] 
+	then echo "all: libft \$(NAME)" >> $path;
+else echo "all: \$(NAME) " >> $path
 fi 
-if [ $USE_LIBFT = true ]
+if [ $USE_LIB = true ]
 	then echo "
 	libft:
-		@make -C libft" >> Makefile;
+		@make -C libft" >> $path;
 fi
 echo "
 \$(NAME): libft \$(INC) \$(OBJ) 
@@ -44,4 +47,4 @@ fclean: clean
 	make fclean -C libft
 	rm -f \$(NAME)
 
-re: fclean all" >> Makefile
+re: fclean all" >> $path
